@@ -1,9 +1,6 @@
 const ts = "1728548288200";
 const publicKey = "91232379fa191da715faf7cc2aae1737";
 const hashVal = "08b0823c430604e5de76c107eae3fca9";
-
-
-
 // tạo class tạo ra instance gửi request
 class Http {
     get(url) {
@@ -84,6 +81,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
     let ui = new RenderUI();
     let store = new Store();
 
+    //call
     store.getCharacter(name)
         .then((character) => {
             ui.renderCharacter(character);
