@@ -75,9 +75,6 @@ class RenderUI {
 
 }
 
-
-
-
 //sự kiện submit thì hiển thị
 document.querySelector("form").addEventListener("submit", (event) => {
     event.preventDefault();
@@ -117,7 +114,7 @@ input.addEventListener("input", (event) => {
         //hiển thị lại cái list đi
         listContainer.style.display = "block";
         jsonData.data["results"].forEach((result) => {
-            //lấy ra name
+            //lấy ra name của nhân vật Marvel dựa trên name từ API lấy được 
             let name = result.name;
             //tạo ra dom ảo
             let div = document.createElement("div");
@@ -140,8 +137,6 @@ input.addEventListener("input", (event) => {
             listContainer.style.display = "none";
         });
     })
-
-
 });
 
 
